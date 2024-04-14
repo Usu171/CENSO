@@ -60,7 +60,7 @@ editable_ORCA_input = {
                     "default":[
                         "! smallprint printgap noloewdin",
                         "! NOSOSCF",
-                        "%MaxCore 8000",
+                        "%MaxCore 3000",
                         "%output",
                         "       print[P_BondOrder_M] 1",
                         "       print[P_Mayer] 1",
@@ -188,6 +188,8 @@ class dfa_settings:
         "wb97x-d3": "wb97x-d3",
         "wb97x-d3bj": "wb97x-d3bj",
         "dsd-blyp": "dsd-blyp-d3",
+        "wb97m-V": "wb97m-V",
+        "wb97m-d4": "wb97m-d4"
     }
     functionals = {
         "pbeh-3c": {
@@ -670,6 +672,27 @@ class dfa_settings:
             "part": ["func0", "func", "func3", "func_j", "func_s"],
             "type": "rsh_hybrid",
         },
+        "wb97m-v": {
+        "tm": None,
+        "orca": "wb97m-v",
+        "disp": "included",
+        "part": ["func0", "func", "func3", "func_j", "func_s"],
+        "type": "rsh_hybrid",
+        },
+        "wb97m-d4": {
+            "tm": None,
+            "orca": "wb97m-d4",
+            "disp": "included",
+            "part": ["func0", "func", "func3", "func_j", "func_s"],
+            "type": "rsh_hybrid",
+        },
+        "pwpb95-d4": {
+            "tm": None,
+            "orca": "pwpb95",
+            "disp": "d4",
+            "part": ["func3", "func_s"],
+            "type": "doublehybrid",
+        },
         "dsd-blyp-d3": {
             "tm": None,
             "orca": "ri-dsd-blyp",
@@ -768,9 +791,18 @@ knownbasissets = [
     "def2-mSVP",
     "def2-SVP",
     "def2-TZVP",
+    "def2-QZVP",
     "def2-TZVPP",
+    "def2-QZVPP",
     "def2-mTZVP",
     "def2-mTZVPP",
+    "ma-def2-TZVP",
+    "ma-def2-SVP",
+    "ma-def2-QZVP",
+    "ma-def-SV(P)",
+    "ma-def2-TZVPP",
+    "ma-def2-QZVPP",
+    "ma-def2-TZVP(-f)",
     "def2-TZVPD",
     "def2-SVPD",
     "def-SVP",

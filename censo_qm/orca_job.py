@@ -66,7 +66,7 @@ class OrcaJob(QmJob):
                     [
                         "! smallprint printgap noloewdin",
                         "! NOSOSCF",
-                        "%MaxCore 8000",
+                        "%MaxCore 3000",
                         "%output",
                         "       print[P_BondOrder_M] 1",
                         "       print[P_Mayer] 1",
@@ -182,7 +182,7 @@ class OrcaJob(QmJob):
                     orcainput["mp2"] = [
                         "%mp2",
                         "    RI true",
-                        "    density relaxed",
+                        "    density none",
                         "end",
                     ]
                 else:
